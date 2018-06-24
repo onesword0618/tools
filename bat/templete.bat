@@ -1,4 +1,4 @@
-@echo 
+@echo off
 setlocal
 rem add Description
 
