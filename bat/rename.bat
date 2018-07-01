@@ -1,30 +1,30 @@
 @echo off
 setlocal
-rem 同階層のディレクトリのすべてのファイルをリネームさせます。
+rem ���K�w�̃f�B���N�g���̂��ׂẴt�@�C�������l�[�������܂��B
 
-eho どうも、マスター。ファイル名のどの位置に文字を挿入いたしますか？
+eho �ǂ����A�}�X�^�[�B�t�@�C�����̂ǂ̈ʒu�ɕ�����}���������܂����H
 echo;
-echo 0:始まりです。
-echo 1:終わりです。
+echo 0:�n�܂�ł��B
+echo 1:�I���ł��B
 
 rem Environment variable
 pushd "%~dp0"
-set /p select="数字で選択して下さい："
-set /p add="追記する文字を入力して下さい："
+set /p select="�����őI�����ĉ������F"
+set /p add="�ǋL���镶������͂��ĉ������F"
 
 if %select%==0 (
     for %%i in (*) do (
-        rem 実行バッチファイル自身以外に実行
+        rem ���s�o�b�`�t�@�C�����g�ȊO�Ɏ��s
         if not %%i==%~n0%~x0 (
-            rem 始まりに追記
+            rem �n�܂�ɒǋL
             ren %%i %add%%%~ni%%~xi
         )
     )
 ) else (
     for %%i in (*) do (
-        rem 実行バッチファイル自身以外に実行
+        rem ���s�o�b�`�t�@�C�����g�ȊO�Ɏ��s
         if not %%i==%~n0%~x0 (
-            rem 終わりに追記
+            rem �I���ɒǋL
             ren %%i %%~ni%add%%%~xi
         )
     )
