@@ -7,4 +7,12 @@
 
 ## ルール
 
-- XXX
+- [リファレンス](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
+
+- バッチの名前とコマンド名を同じにしない。
+
+  - コマンドではなく、バッチファイルを認識するため。
+
+- コマンドと変数名には大文字、小文字の区別がつかない。
+- ファイルの頭に`@echo off`を記載する。
+- `rem`でファイル名、説明を記載する。
